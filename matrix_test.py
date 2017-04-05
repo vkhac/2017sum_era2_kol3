@@ -77,7 +77,19 @@ class MyTestMatrixHector(unittest.TestCase):
         self.assertEqual(m4.rows[1][0], 43)
         self.assertEqual(m4.rows[1][1], 50)
         
-    
+    def test_iter(self):
+        m1 = Matrix(self.l1)
+        
+        l4 = []
+        
+        for elem in m1:
+            l4.append(elem)
+        
+        self.assertEqual(l4[0], 1)
+        self.assertEqual(l4[1], 2)
+        self.assertEqual(l4[2], 3)
+        self.assertEqual(l4[3], 4)
+        
     
     
     
